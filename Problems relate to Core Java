@@ -1,0 +1,114 @@
+mport java.util.Scanner;
+
+public class Main {
+    public static void main(String[]args){
+        // Input a year and find whether it is a leap year or not.
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter year:");
+        int a = in.nextInt();
+        year(a);
+
+    }
+    static void year(int a){
+        if(a%4==0 && a%100 !=0 ){
+            System.out.print(a + " Its a leap year");
+
+        }
+        else if(a%400==0){
+            System.out.print(a + " its a leap yaer...");
+        }
+        else{
+            System.out.print(a +"not leap year");
+        }
+    }
+}
+
+// Write a program to print whether a number is even or odd, also take input from the user.
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter the number:");
+        int a = in.nextInt();
+        number(a);
+
+    }
+      static void number(int a){
+         if(a%2==0){
+             System.out.print(a + " Its a even number");
+         }
+         else{
+             System.out.print(a +" odd number");
+         }
+
+      //Take name as input and print a greeting message for that particular name.
+     Scanner in = new Scanner(System.in);
+     String a = in.nextLine();
+     greeting(a);
+
+
+    }
+    static void greeting(String name){
+        System.out.print("Goo Morning "  + name);
+
+      }
+//Write a program to input principal, time, and rate (P, T, R) from the user and find Simple Interest.
+        Scanner in = new Scanner (System.in);
+        System.out.println("Enter the principle value:");
+        float principle = in.nextFloat();
+        System.out.println("Enter the Rate per annum:");
+        int rate = in.nextInt();
+        System.out.println("Enter the  Time in years:");
+        int time = in.nextInt();
+        simpleIntrest(principle,rate,time);
+
+}
+    static void simpleIntrest(float p, int r , int t){
+        float si = (p*r*t)/100;
+        System.out.print("Simple Intrest is:" + si);
+
+    }
+
+   //Take 2 numbers as input and print the largest number.
+        Scanner in  = new Scanner(System.in);
+        System.out.print("Enter num 1:");
+        float a = in.nextFloat();
+        System.out.print("Enter num 2:");
+        float b = in.nextFloat();
+        System.out.print("This is largest number" + Math.max(a,b));
+==========================================
+import java.util.ArrayList;
+
+public class AlternateMerge {
+
+    public static int[] mergeArrays(int[] arr1, int[] arr2) {
+        int maxLength = Math.max(arr1.length, arr2.length);
+        ArrayList<Integer> resultList = new ArrayList<>();
+
+        for (int i = 0; i < maxLength; i++) {
+            if (i < arr1.length) {
+                resultList.add(arr1[i]);
+            }
+            if (i < arr2.length) {
+                resultList.add(arr2[i]);
+            }
+        }
+
+        // Convert ArrayList to int[]
+        int[] result = new int[resultList.size()];
+        for (int i = 0; i < resultList.size(); i++) {
+            result[i] = resultList.get(i);
+        }
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        int[] array1 = {1, 3, 5};
+        int[] array2 = {2, 4, 6, 8, 10};
+
+        int[] result = mergeArrays(array1, array2);
+
+        // Print result
+        for (int num : result) {
+            System.out.print(num + " ");
+        }
+    }
+}
