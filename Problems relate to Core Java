@@ -1,3 +1,15 @@
+// code factorial
+System.out.println("ENter the number");
+                Scanner in = new Scanner(System.in);
+                int a = in.nextInt();
+                int temp = 1;
+                for(int i = a; i>0 ;i--){
+                        temp=temp*i;
+
+                }
+                System.out.println(temp);
+
+
 //Input a year and find whether it is a leap year or not.
                 Scanner in = new Scanner(System.in);
                 System.out.print("Enter year");
